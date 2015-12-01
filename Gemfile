@@ -9,6 +9,7 @@ gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
 gem 'tzinfo-data'
 gem 'sdoc',         '0.4.0', group: :doc
+gem 'sqlite3'
 
 group :development, :test do
   gem 'sqlite3'
@@ -23,6 +24,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
+  gem 'pg'
   gem 'rails_12factor', '0.0.2'
 end
