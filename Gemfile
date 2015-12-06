@@ -10,7 +10,7 @@ gem 'jbuilder',     '2.2.3'
 gem 'tzinfo-data'
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'guard'
-
+gem	'bootstrap-sass', '3.2.0.0'
 group :development, :test do
 
   gem 'guard-minitest' 	
