@@ -11,6 +11,8 @@ gem 'tzinfo-data'
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'guard'
 gem	'bootstrap-sass', '3.2.0.0'
+gem	'bcrypt', 		'3.1.10'	
+
 group :development, :test do
 
   gem 'guard-minitest' 	
