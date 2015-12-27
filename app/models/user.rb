@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
-	attr_accessor :remember_token, :activation_token, :reset_token
-  	before_save   :downcase_email
-  	before_create :create_activation_digest
+	has_many :microposts, dependent: :destroy
+  attr_accessor :remember_token, :activation_token, :reset_token
+  before_save   :downcase_email
+  before_create :create_activation_digest
 	
 	validates :name, presence: true, length: {maximum: 50}
   	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -17,6 +18,10 @@ class User < ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
 	end
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+  
 	def authenticated?(attribute, token)
 		digest = send("#{attribute}_digest")
 		return false if digest.nil?
