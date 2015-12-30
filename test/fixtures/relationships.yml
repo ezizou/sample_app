@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+  follower: Danger
+  followed: Lana
+
+two:
+  follower: Danger
+  followed: Malory
+
+three:
+  follower: Lana
+  followed: Danger
+
+four:
+  follower: Archer
+  followed: Danger
+
+
