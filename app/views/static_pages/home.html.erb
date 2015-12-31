@@ -17,18 +17,35 @@
       </div>
     </div>
 <% else %>  
-<div class="center jumbotron">
-    <h1>Hi Friend! </h1>
-
-    <h2>
-      This is the home page for the
-      <a href="http://www.urbandictionary.com/define.php?term=short+rounds&defid=632638"> center for Short Round</a>
-      sample application.
-    </h2>
-
+    
+  <head>
+    <title>I'm just a guy who's a hero for fun.</title>
+    <style>
+      body {
+        text-align: center;
+        background-position: center;
+        color: gray;
+        font-family: helvetica;
+      }
+      p {
+        font-size: 22px;
+      }
+      .full {
+        background: url('http://imgur.com/pnV7ukY') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      }
+  
+    </style>
+  </head>
+  <body>
+    <img src="http://imgur.com/CcHHUpA">
+    <p>Hi! Sign up for a funnier version of twitter here. Seriously.</p>
     <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-              'http://rubyonrails.org/' %>
+    <%= link_to image_tag("rails.png"),
+                    'http://indianajones.wikia.com/wiki/Short_Round' %>
+  </body>
 <% end %>
