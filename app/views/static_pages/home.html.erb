@@ -17,9 +17,11 @@
       </div>
     </div>
 <% else %>  
-    
+  <div class="carousel">
+   <img src="http://i.imgur.com/pnV7ukY.jpg" class="img-responsive" alt="Responsive image">
+  </div> 
   <head>
-    <title>I'm just a guy who's a hero for fun.</title>
+    
     <style>
       body {
         text-align: center;
@@ -30,21 +32,16 @@
       p {
         font-size: 22px;
       }
-      .full {
-        background: url('http://i.imgur.com/pnV7ukY.jpg') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-      }
-  
+    
     </style>
   </head>
   <body>
-    <img src="http://imgur.com/CcHHUpA">
-    <p>Hi! Sign up for a funnier version of twitter here. Seriously.</p>
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-
+    <div>
+      <img src="http:/i.imgur.com/CcHHUpA">
+      <p>Hi! Sign up for a funnier version of twitter here. Seriously.</p>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    </div> 
+    
     <%= link_to image_tag("rails.png"),
                     'http://indianajones.wikia.com/wiki/Short_Round' %>
   </body>
